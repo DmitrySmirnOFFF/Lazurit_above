@@ -876,22 +876,34 @@ void Device_Check_Error(void){
 	//Ошибки первого драйвера
 	if(CHECK_DRW1_EN){
 		if(CHECK_DRW_PWR){
-			if(PWR_Fault1_State){
+			if(PWR_Fault1_State)
+			{
 				BIT_SET(Device_Error, 1);
-			}else {
-				//BIT_RESET(Device_Error, 1);
+			}
+			else
+			{
+				BIT_RESET(Device_Error, 1);
+				asm("NOP");
 			}
 		}
 		if(CHECK_DRW_HW){
-			if(Fault_H1_State){
+			if(Fault_H1_State)
+			{
 				BIT_SET(Device_Error, 6);
-			}else {
-				//BIT_RESET(Device_Error, 6);
 			}
-			if(Fault_L1_State){
+			else
+			{
+				asm("NOP");
+				BIT_RESET(Device_Error, 6);
+			}
+			if(Fault_L1_State)
+			{
 				BIT_SET(Device_Error, 7);
-			}else {
-				//BIT_RESET(Device_Error, 7);
+			}
+			else
+			{
+				asm("NOP");
+				BIT_RESET(Device_Error, 7);
 			}
 		}
 	}
@@ -899,22 +911,34 @@ void Device_Check_Error(void){
 	//Ошибки второго драйвера
 	if(CHECK_DRW2_EN){
 		if(CHECK_DRW_PWR){
-			if(PWR_Fault2_State){
+			if(PWR_Fault2_State)
+			{
 				BIT_SET(Device_Error, 2);
-			}else {
-				//BIT_RESET(Device_Error, 2);
+			}
+			else
+			{
+				asm("NOP");
+				BIT_RESET(Device_Error, 2);
 			}
 		}
 		if(CHECK_DRW_HW){
-			if(Fault_H2_State){
+			if(Fault_H2_State)
+			{
 				BIT_SET(Device_Error, 8);
-			}else {
-				//BIT_RESET(Device_Error, 8);
 			}
-			if(Fault_L2_State){
+			else
+			{
+				asm("NOP");
+				BIT_RESET(Device_Error, 8);
+			}
+			if(Fault_L2_State)
+			{
 				BIT_SET(Device_Error, 9);
-			}else {
-				//BIT_RESET(Device_Error, 9);
+			}
+			else
+			{
+				asm("NOP");
+				BIT_RESET(Device_Error, 9);
 			}
 		}
 	}
@@ -922,22 +946,34 @@ void Device_Check_Error(void){
 	//Ошибки третьего драйвера
 	if(CHECK_DRW3_EN){
 		if(CHECK_DRW_PWR){
-			if(PWR_Fault3_State){
+			if(PWR_Fault3_State)
+			{
 				BIT_SET(Device_Error, 3);
-			}else {
-				//BIT_RESET(Device_Error, 3);
+			}
+			else
+			{
+				asm("NOP");
+				BIT_RESET(Device_Error, 3);
 			}
 		}
 		if(CHECK_DRW_HW){
-			if(Fault_H3_State){
+			if(Fault_H3_State)
+			{
 				BIT_SET(Device_Error, 10);
-			}else {
-				//BIT_RESET(Device_Error, 10);
 			}
-			if(Fault_L3_State){
+			else
+			{
+				asm("NOP");
+				BIT_RESET(Device_Error, 10);
+			}
+			if(Fault_L3_State)
+			{
 				BIT_SET(Device_Error, 11);
-			}else {
-				//BIT_RESET(Device_Error, 11);
+			}
+			else
+			{
+				asm("NOP");
+				BIT_RESET(Device_Error, 11);
 			}
 		}
 	}
@@ -945,22 +981,34 @@ void Device_Check_Error(void){
 	//Ошибки четвертого драйвера
 	if(CHECK_DRW4_EN){
 		if(CHECK_DRW_PWR){
-			if(PWR_Fault4_State){
+			if(PWR_Fault4_State)
+			{
 				BIT_SET(Device_Error, 4);
-			}else {
-				//BIT_RESET(Device_Error, 4);
+			}
+			else
+			{
+				asm("NOP");
+				BIT_RESET(Device_Error, 4);
 			}
 		}
 		if(CHECK_DRW_HW){
-			if(Fault_H4_State){
+			if(Fault_H4_State)
+			{
 				BIT_SET(Device_Error, 12);
-			}else {
-				//BIT_RESET(Device_Error, 12);
 			}
-			if(Fault_L4_State){
+			else
+			{
+				asm("NOP");
+				BIT_RESET(Device_Error, 12);
+			}
+			if(Fault_L4_State)
+			{
 				BIT_SET(Device_Error, 13);
-			}else {
-				//BIT_RESET(Device_Error, 13);
+			}
+			else
+			{
+				asm("NOP");
+				BIT_RESET(Device_Error, 13);
 			}
 		}
 	}

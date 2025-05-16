@@ -21,4 +21,4 @@
 ../Core/Src/main.c:829:6:Button_Control	5
 ../Core/Src/main.c:845:6:Device_Indication_Process	6
 ../Core/Src/main.c:860:6:Device_Check_Error	13
-../Core/Src/main.c:998:6:Error_Handler	1
+../Core/Src/main.c:1046:6:Error_Handler	1

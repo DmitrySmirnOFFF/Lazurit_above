@@ -44,37 +44,37 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := MAKET_VID_DOWN
+BUILD_ARTIFACT_NAME := MAKET_VID_FINAL
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-MAKET_VID_DOWN.elf \
+MAKET_VID_FINAL.elf \
 
 MAP_FILES += \
-MAKET_VID_DOWN.map \
+MAKET_VID_FINAL.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-MAKET_VID_DOWN.list \
+MAKET_VID_FINAL.list \
 
 OBJCOPY_HEX += \
-MAKET_VID_DOWN.hex \
+MAKET_VID_FINAL.hex \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: MAKET_VID_DOWN.elf secondary-outputs
+main-build: MAKET_VID_FINAL.elf secondary-outputs
 
 # Tool invocations
-MAKET_VID_DOWN.elf MAKET_VID_DOWN.map: $(OBJS) $(USER_OBJS) D:\Users\Anton\Documents\Code\STM32\MAKET_VID_DOWN\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "MAKET_VID_DOWN.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Users\Anton\Documents\Code\STM32\MAKET_VID_DOWN\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MAKET_VID_DOWN.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+MAKET_VID_FINAL.elf MAKET_VID_FINAL.map: $(OBJS) $(USER_OBJS) C:\Project\Cube_IDE\Lazurit_above\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "MAKET_VID_FINAL.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Project\Cube_IDE\Lazurit_above\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MAKET_VID_FINAL.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -83,19 +83,19 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-MAKET_VID_DOWN.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "MAKET_VID_DOWN.list"
+MAKET_VID_FINAL.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "MAKET_VID_FINAL.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-MAKET_VID_DOWN.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "MAKET_VID_DOWN.hex"
+MAKET_VID_FINAL.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "MAKET_VID_FINAL.hex"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) MAKET_VID_DOWN.elf MAKET_VID_DOWN.hex MAKET_VID_DOWN.list MAKET_VID_DOWN.map default.size.stdout
+	-$(RM) MAKET_VID_FINAL.elf MAKET_VID_FINAL.hex MAKET_VID_FINAL.list MAKET_VID_FINAL.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX)

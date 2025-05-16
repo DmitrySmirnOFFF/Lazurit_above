@@ -20,5 +20,5 @@
 ../Core/Src/main.c:810:6:LED_Control	24	static
 ../Core/Src/main.c:829:6:Button_Control	16	static
 ../Core/Src/main.c:845:6:Device_Indication_Process	8	static
-../Core/Src/main.c:860:6:Device_Check_Error	4	static
-../Core/Src/main.c:998:6:Error_Handler	4	static,ignoring_inline_asm
+../Core/Src/main.c:860:6:Device_Check_Error	4	static,ignoring_inline_asm
+../Core/Src/main.c:1046:6:Error_Handler	4	static,ignoring_inline_asm
