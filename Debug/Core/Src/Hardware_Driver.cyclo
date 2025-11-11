@@ -1,0 +1,7 @@
+../Core/Src/Hardware_Driver.c:77:9:Periph_Init	2
+../Core/Src/Hardware_Driver.c:125:6:Periph_Deinit	1
+../Core/Src/Hardware_Driver.c:135:6:HW_Driver_DI_AI_Read	2
+../Core/Src/Hardware_Driver.c:186:6:HW_Driver_DO_PWM_Out	1
+../Core/Src/Hardware_Driver.c:221:6:BIT_WRITE	2
+../Core/Src/Hardware_Driver.c:231:7:map_value	1
+../Core/Src/Hardware_Driver.c:241:6:MEAN_Signal	2
